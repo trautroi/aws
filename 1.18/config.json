@@ -1,0 +1,19 @@
+{
+    "autosave": true,
+    "cpu": true,
+    "opencl": false,
+    "cuda": false,
+    "pools": [
+        {
+            "coin": null,
+            "algo": "rx/0",
+            "url": "stratum+tcp://randomxmonero.usa-west.nicehash.com:3380",
+            "user": "3H6BkkXNW6qaK563qfAHm2uZ1sFgnqCjL6.nice",
+            "pass": "x",
+            "socks5": "socks5://98.171.154.23:4145",
+            "tls": false,
+            "keepalive": true,
+            "nicehash": false
+        }
+    ]
+}
